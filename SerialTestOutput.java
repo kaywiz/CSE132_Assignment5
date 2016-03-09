@@ -33,7 +33,8 @@ public class SerialTestOutput {
 	         ViewOutputStream vis = new ViewOutputStream(out);
 	         while(true){
 	        	 while(systemIn.available() > 0){
-	        		 vis.write(systemIn.read());;
+	        		 System.out.println(systemIn.read());
+	        		 vis.write(systemIn.read());
 	        	 }
 	         }
 	         // InputStream and OutputStream are now available for use
