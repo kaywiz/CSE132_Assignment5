@@ -22,12 +22,12 @@ public class ViewOutputStream extends FilterOutputStream {
 		ps = psp.getPrintStream();
 	}
 
-	public int write() throws IOException {
-		int x = System.in.read();
-		super.write(x);
-		String hex = Integer.toHexString(x);
+	public void write(int a) throws IOException {
+		//int x = System.in.read();
+		super.write(a);
+		String hex = Integer.toHexString(a);
+		System.out.println(hex);
 		ps.println(hex);
-		return x;
 
 	}
 
